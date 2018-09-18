@@ -2,7 +2,7 @@ const {RichEmbed} = require('discord.js');
 const {caseNumber} = require('../util/caseNumber.js');
 const {parseUser} = require('../util/parseUser.js');
 const config = require('../config.json');
-exports.run = async (client, message, args) => {
+exports.run = async (client, message, args,) => {
   const user = message.mentions.users.first();
   parseUser(message, user);
   const modlog = client.channels.find('name', 'mod-log');
@@ -12,7 +12,7 @@ exports.run = async (client, message, args) => {
   if (!muteRole) return message.reply('I cannot find a mute role').catch(console.error);
   if (message.mentions.users.size < 1) return message.reply('You must mention someone to mute them.').catch(console.error);
   const reason = args.splice(1, args.length).join(' ') || `Moderator left section blank. Use ${config.prefix}reason ${caseNum} <reason> to update the reason.`;
-
+    
   const embed = new RichEmbed()
     .setColor(0x00AE86)
     .setTimestamp()
