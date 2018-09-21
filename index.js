@@ -12,7 +12,7 @@ const log = message => {
 };
 
 client.on('ready', () => {
-    client.user.setActivity('https://github.com/LivelySource/Bot-Out-Here', {type: 'WATCHING'});
+    client.user.setActivity('.help', {type: 'WATCHING'});
 });
 
 client.commands = new Discord.Collection();
