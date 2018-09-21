@@ -8,7 +8,12 @@ require('./util/eventLoader')(client);
 
 const log = message => {
   console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`);
+  
 };
+
+client.on('ready', () => {
+    client.user.setActivity('https://github.com/LivelySource/Bot-Out-Here', {type: 'WATCHING'});
+});
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
@@ -71,4 +76,4 @@ client.on('error', e => {
   console.log(chalk.bgRed(e.replace(regToken, 'that was redacted')));
 });
 
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.TOKEN);

@@ -1,14 +1,33 @@
 {
-  "name": "botouthere",
+  "name": "Bot-Out-Here",
   "version": "1.0.0",
-  "description": "Personal Use Only",
-  "main": "node index.js",
+  "description": "A simple discord bot",
+  "main": "index.js",
+  "engines": {
+    "node": "8.x",
+    "npm": "*"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-  "author": "wes",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LivelySource/Bot-Out-Here"
+  },
+  "keywords": [
+    "heroku",
+    "discord.js",
+	"moment",
+	"ms",
+	"chalk"
+	],
+	"author": "livelysource",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LivelySource/Bot-Out-Here/issues"
+	},
+  "homepage": "https://github.com/LivelySource/Bot-Out-Here#readme",
   "dependencies": {
     "chalk": "^1.1.3",
     "discord.js": "^11.1.0",
