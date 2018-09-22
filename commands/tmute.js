@@ -101,7 +101,7 @@ exports.exec = async (client, message, args) => {
 };
 
 exports.config = {
-  aliases: [ 'tm' ],
+  alias: [ 'tm' ],
   enabled: true,
   argsDefinitions: [
     { name: 'id', type: String, defaultOption: true },
