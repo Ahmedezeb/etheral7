@@ -1,10 +1,10 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-    let application = args.join(" ").slice(22);
-
+    let submit = message.guild.members.get(args[0]));
+    if(!rUser) return message.channel.send("Couldn't find user.");
     let applicationEmbed = new Discord.RichEmbed()
-    .setDescription("Reports")
+    .setDescription("Applications")
     .setColor("#15f153")
     .addField("Applicant", `${message.author} with ID: ${message.author.id}`)
     .addField("Time", message.createdAt)
