@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-	let application = args.join(" ")
+	let application = args.join(" ");
 	if(!application) return message.channel.send("You Must Send Your Application");
 	
     let applicationEmbed = new Discord.RichEmbed()
@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Applicant", `${message.author} with ID: ${message.author.id}`)
     .addField("Application", application)
 	.addField("Time", message.createdAt);
-	
+
     let applicationschannel = message.guild.channels.find(`name`, "applications");
     if(!applicationschannel) return message.channel.send("Couldn't find applications channel.");
 
@@ -18,7 +18,6 @@ module.exports.run = async (bot, message, args) => {
     message.delete().catch(O_o=>{});
     applicationschannel.send(applicationEmbed);
     applicationschannel.send('If you think the application should be accepted react with :white_check_mark:\n If you think the application should be rejected react with :negative_squared_cross_mark:')
-
 };
 
  exports.conf = {
