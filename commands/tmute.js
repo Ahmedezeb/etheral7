@@ -109,7 +109,7 @@ exports.config = {
     { name: 'server', type: Boolean, alias: 's' },
     { name: 'timeout', type: Number, alias: 't' }
   ],
-  alias: [ 'tm' ],
+  aliases: [ 'tm' ],
   permLevel: 2
 };
 
