@@ -1,5 +1,5 @@
 exports.run = async (client, message) => {
-  const settings = await client.guilds.get(message.guild.id);
+  const nsfw = client.channels.find('name', 'nsfw')
 
   if (message.channel.nsfw == false){
     return message.reply('due to We Out Here\'s rules, urban can only be used in NSFW channels, as the content of the command may not be appreciate for all ages.')
