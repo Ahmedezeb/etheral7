@@ -101,14 +101,16 @@ exports.exec = async (client, message, args) => {
 };
 
 exports.config = {
-  alias: [ 'tm' ],
   enabled: true,
+  guildOnly: false,
   argsDefinitions: [
     { name: 'id', type: String, defaultOption: true },
     { name: 'reason', alias: 'r', type: String, multiple: true, defaultValue: [ 'No reason given.' ] },
     { name: 'server', type: Boolean, alias: 's' },
     { name: 'timeout', type: Number, alias: 't' }
-  ]
+  ],
+  alias: [ 'tm' ],
+  permLevel: 2
 };
 
 exports.help = {
