@@ -1,13 +1,18 @@
 exports.run = async (client, message) => {
+  const settings = await client.guilds.get(message.guild.id);
 
-  if (message.content.startsWith(settings.prefix + "define")) {
-    var term = message.content.replace(settings.prefix + "define ", "");
+  if (message.channel.nsfw == false){
+    return message.reply('due to We Out Here\'s rules, urban can only be used in NSFW channels, as the content of the command may not be appreciate for all ages.')
   }
-  if (message.content.startsWith(settings.prefix + "urban")) {
-    var term = message.content.replace(settings.prefix + "urban ", "");
+  
+  if (message.content.startsWith(config.prefix + "define")) {
+    var term = message.content.replace(config.prefix + "define ", "");
   }
-  if (message.content.startsWith(settings.prefix + "def")) {
-    var term = message.content.replace(settings.prefix + "def ", "");
+  if (message.content.startsWith(config.prefix + "urban")) {
+    var term = message.content.replace(config.prefix + "urban ", "");
+  }
+  if (message.content.startsWith(config.prefix + "def")) {
+    var term = message.content.replace(config.prefix + "def ", "");
   }
   var request = require("request");
   request("http://api.scorpstuff.com/urbandictionary.php?term=" + term, function(error, response, body) {
