@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-	let application = args.join(" ").slice(22);
+	let application = args.join(" ")
 	if(!application) return message.channel.send("You Must Send Your Application");
 	
     let applicationEmbed = new Discord.RichEmbed()
