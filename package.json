@@ -20,6 +20,7 @@
     "discord.js",
 	"moment",
 	"ms",
+	"reqeust",
 	"chalk"
 	],
 	"author": "livelysource",
@@ -33,6 +34,7 @@
     "discord.js": "^11.1.0",
     "moment": "^2.18.1",
     "ms": "^0.7.3",
+	"request": "^2.85.0",
 	"superagent": "^3.8.3"
   }
 }
