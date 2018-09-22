@@ -5,9 +5,8 @@ module.exports.run = async (bot, message, args) => {
 	if(!application) return message.channel.send("You Must Send Your Application");
 	
     let applicationEmbed = new Discord.RichEmbed()
-    .setDescription("Applications")
     .setColor("#ff69b4")
-    .addField("Applicant", `${message.author} with ID: ${message.author.id}`)
+    .addField("Applicant", `${message.author}`)
     .addField("Application", application)
 	.setFooter(message.createdAt);
 
