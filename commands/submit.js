@@ -6,18 +6,19 @@ module.exports.run = async (bot, message, args) => {
 	
     let applicationEmbed = new Discord.RichEmbed()
     .setDescription("Applications")
-    .setColor("#15f153")
+    .setColor("#ff69b4")
     .addField("Applicant", `${message.author} with ID: ${message.author.id}`)
-    .addField("Time", message.createdAt)
-    .addField("Application", application);
-
+    .addField("Application", application)
+	.setFooter("Time", message.createdAt);
+	
     let applicationschannel = message.guild.channels.find(`name`, "applications");
     if(!applicationschannel) return message.channel.send("Couldn't find applications channel.");
 
 
     message.delete().catch(O_o=>{});
     applicationschannel.send(applicationEmbed);
-    applicationschannel.send('<@&472179405687488541>')
+    applicationschannel.send(`If you think the application should be accepted react  with`':white_check_mark:')
+	applicationschannel.send(`If you think the application should be rejected react  with`'::negative_squared_cross_mark:')
 };
 
  exports.conf = {
