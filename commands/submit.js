@@ -1,8 +1,9 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-    let submit = message.guild.members.get(args[0]));
-    if(!rUser) return message.channel.send("Couldn't find user.");
+	let application = args.join(" ").slice(22);
+	if(!application) return message.channel.send("You Must Send Your Application");
+	
     let applicationEmbed = new Discord.RichEmbed()
     .setDescription("Applications")
     .setColor("#15f153")
