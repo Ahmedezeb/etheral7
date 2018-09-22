@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#ff69b4")
     .addField("Applicant", `${message.author} with ID: ${message.author.id}`)
     .addField("Application", application)
-	.setFooter("Time", message.createdAt);
+	.addField("Time", message.createdAt);
 	
     let applicationschannel = message.guild.channels.find(`name`, "applications");
     if(!applicationschannel) return message.channel.send("Couldn't find applications channel.");
