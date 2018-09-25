@@ -11,7 +11,7 @@ exports.run = (client, message, args) => {
     if(name === "" || name.indexOf(":") > -1 || !isValid(name)){
         var emoji = client.emojis.find("name", "PepeKMS");
         if(emoji === null) emoji = ":(";
-        message.channel.send(`Illegal argument ${emoji}`);
+        message.channel.send(`.fortnite [platform] [username] ${emoji}`);
         return;
     }
 
