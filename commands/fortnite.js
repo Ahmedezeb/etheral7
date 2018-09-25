@@ -1,6 +1,5 @@
 const Discord = require("discord.js")
 const config = require("../config.json")
-const apikey = require("../keys.json")
 const Fortnite = require("fortnite")
 const ft = new Fortnite("a6bdbd27-0573-4e8a-9ff4-9b1d73af32b2")
 
