@@ -20,7 +20,8 @@ exports.run = async (client, message, args) => {
   .addField("Kicked User", `${user.tag}`)
   .addField("Kicked By", `<@${message.author.tag}>`)
   .addField("Kicked In", message.channel)
-  .addField("Time", message.createdAt)
+  .addField("Time", message.createdAt);
+
   return client.channels.get(modlog.id).send({embed});
 };
 
