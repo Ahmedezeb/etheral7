@@ -48,18 +48,15 @@ exports.run = async (client, message, args) => {
 }
 
 // Provides useful information about this command.
-exports.help = {
- name: 'initsettings',
- category: 'core',
- description: 'Initialize settings for this guild.',
- usage: 'a!initsettings'
+exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: [],
+  permLevel: 0
 };
 
-// Provides configeration use for
-// this commands, like useful properties such
-// as permission levels.
-exports.config = {
- permissionLevel: 2,
- requiredRole: "Admins",
- guildOnly: true
+exports.help = {
+  name: 'initsettings',
+  description: 'starts settings.js',
+  usage: 'initsettings'
 };
