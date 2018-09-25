@@ -9,10 +9,10 @@ exports.run = (client, message, args) => {
         message.channel.send("No board specified");
         return;
     }
-    
-    if (message.channel.nsfw == false){	  if (message.channel.nsfw == false){
-        return message.reply('due to We Out Here\'s rules, urban can only be used in NSFW channels, as the content of the command may not be appreciate for all ages.')
 
+    if (message.channel.nsfw == false){
+        return message.reply('due to We Out Here\'s rules, urban can only be used in NSFW channels, as the content of the command may not be appreciate for all ages.');
+    }
     // print all boards
     if(args.length == 2){
         if(args[1] === "boards"){
