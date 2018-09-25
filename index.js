@@ -12,7 +12,7 @@ const log = message => {
 };
 
 client.on('ready', () => {
-    client.user.setActivity('.help', {type: 'WATCHING'});
+    client.user.setActivity('Type .help to get started!', {type: 'WATCHING'});
 });
 
 client.commands = new Discord.Collection();
