@@ -83,5 +83,5 @@ exports.conf = {
 module.exports.help = {
   name: '4chan',
   description: 'Look throughout the world of 4chan',
-  usage: '4chan [board]'
+  usage: '4chan board [board]'
 }
