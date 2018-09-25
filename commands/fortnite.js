@@ -90,5 +90,5 @@ exports.conf = {
   exports.help = {
 	name: 'fortnite',
 	description: 'fortnite stats',
-	usage: 'fortnite [username]'
+	usage: 'fortnite [platform] [username]'
   };
