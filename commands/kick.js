@@ -14,7 +14,7 @@ exports.run = async (client, message, args) => {
 
   const reason = args.splice(1, args.length).join(' ') || `Awaiting moderator's input. Use ${config.prefix}reason ${caseNum} <reason>.`;
   const embed = new RichEmbed()
-  .setColor(0x00AE86)
+  .setColor(orange)
   .setTimestamp()
   .setDescription(`**Action:** Kick\n**Target:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}`)
   .setFooter(`Case ${caseNum}`);

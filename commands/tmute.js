@@ -8,7 +8,7 @@ const orange = config.orange;
 
 module.exports.run = async (bot, message, args) => {
 
-
+ 
   if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No can do.");
   if(args[0] == "help"){
     message.reply("Usage: .tempmute <user> <1s/m/h/d>");
@@ -59,6 +59,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("Muted in", message.channel)
   .addField("Time", message.createdAt)
   .addField("Length", mutetime)
+  .setFooter(`Case ${caseNum}`)
   .addField("Reason", reason);
 
   let incidentschannel = message.guild.channels.find(`name`, "mod-log");
