@@ -9,7 +9,7 @@ exports.run = (client, message, args) => {
     name = name.trim(); // remove last space
 
     if(name === "" || name.indexOf(":") > -1 || !isValid(name)){
-        var emoji = client.emojis.find("name", "aaa");
+        var emoji = client.emojis.find("name", "PepeKMS");
         if(emoji === null) emoji = ":(";
         message.channel.send(`Illegal argument ${emoji}`);
         return;
