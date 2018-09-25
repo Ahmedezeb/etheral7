@@ -2,9 +2,7 @@ const {RichEmbed} = require('discord.js');
 const {caseNumber} = require('../util/caseNumber.js');
 const {parseUser} = require('../util/parseUser.js');
 const config = require('../config.json');
-
 exports.run = async (client, message, args) => {
-  const orange = config.orange;
   const user = message.mentions.users.first();
   parseUser(message, user);
   const modlog = client.channels.find('name', 'mod-log');
@@ -16,7 +14,7 @@ exports.run = async (client, message, args) => {
 
   const reason = args.splice(1, args.length).join(' ') || `Awaiting moderator's input. Use ${config.prefix}reason ${caseNum} <reason>.`;
   const embed = new RichEmbed()
-  .setColor(orange)
+  .setColor(0x00AE86)
   .setTimestamp()
   .setDescription(`**Action:** Kick\n**Target:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}`)
   .setFooter(`Case ${caseNum}`);
