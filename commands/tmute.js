@@ -82,6 +82,6 @@ exports.conf = {
 
 exports.help = {
   name: 'tempmute'
-  description: 'Bans the mentioned user.',
-  usage: 'mute [ion] [reason]'
+  description: 'tempmutes the mentioned user.',
+  usage: 'tmute[mention] [time] [reason]'
 };
