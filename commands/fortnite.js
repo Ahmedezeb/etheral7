@@ -41,6 +41,15 @@ module.exports.run = async (bot, message, arg) => {
 	
 }
 
-module.exports.help = {
-	name: "fortnite"
-}
+exports.conf = {
+	enabled: true,
+	guildOnly: false,
+	aliases: [],
+	permLevel: 0
+  };
+  
+  exports.help = {
+	name: 'fortnite',
+	description: 'Gathers Fortnite Stats',
+	usage: 'fortnite [username] [platform]'
+  };
