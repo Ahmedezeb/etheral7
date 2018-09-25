@@ -81,7 +81,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'tempmute'
+  name: 'tempmute',
   description: 'tempmutes the mentioned user.',
   usage: 'tmute[mention] [time] [reason]'
 };
