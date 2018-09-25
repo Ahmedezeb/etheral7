@@ -19,7 +19,8 @@ module.exports.run = async (bot, message, args) => {
     let kickChannel = message.guild.channels.find(`name`, "mod-log");
     if(!kickChannel) return message.channel.send("Can't find incidents channel.");
 	
-    message.guild.member(kUser).kick(kReason + 'https://discord.gg/reFzBd2');
+    message.guild.member(kUser).kick(kReason);
+	kUser.send(`https://discord.gg/reFzBd2`);
     kickChannel.send(kickEmbed);
 }
 
