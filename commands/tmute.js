@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const ms = require("ms");
-const {caseNumber} = require('../util/caseNumber.js');
 const config = require("../config.json");
 const red = config.red;
 const green = config.green;
@@ -46,7 +45,7 @@ module.exports.run = async (bot, message, args) => {
   message.delete().catch(O_o=>{});
 
   try{
-    await tomute.send(`Hi! You've been muted for ${mutetime}. Sorry!`)
+    await tomute.send(`Hello, you have been muted for ${mutetime}. If you feel this is a mistake or abuse, message _Lively#0286`)
   }catch(e){
     message.channel.send(`A user has been muted... but their DMs are locked. They will be muted for ${mutetime}`)
   }
@@ -59,7 +58,6 @@ module.exports.run = async (bot, message, args) => {
   .addField("Muted in", message.channel)
   .addField("Time", message.createdAt)
   .addField("Length", mutetime)
-  .setFooter(`Case ${caseNum}`)
   .addField("Reason", reason);
 
   let incidentschannel = message.guild.channels.find(`name`, "mod-log");
