@@ -21,7 +21,6 @@ exports.run = async (client, message, args) => {
     .setColor(orange)
     .setTimestamp()
     .setDescription(`Mute executed by ${message.author}`)
-    .setFooter(`Case ${caseNum}`)
 	.addField("Muted User", `${user.tag}`)
 	.addField("Muted in", message.channel)
 	.addField("Time", message.createdAt)
