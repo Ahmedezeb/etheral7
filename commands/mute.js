@@ -2,6 +2,10 @@ const {RichEmbed} = require('discord.js');
 const {caseNumber} = require('../util/caseNumber.js');
 const {parseUser} = require('../util/parseUser.js');
 const config = require('../config.json');
+const red = config.red;
+const green = config.green;
+const orange = config.orange;
+
 exports.run = async (client, message, args) => {
   const user = message.mentions.users.first();
   parseUser(message, user);
@@ -14,10 +18,15 @@ exports.run = async (client, message, args) => {
   const reason = args.splice(1, args.length).join(' ') || `Moderator left section blank. Use ${config.prefix}reason ${caseNum} <reason> to update the reason.`;
 
   const embed = new RichEmbed()
-    .setColor(0x00AE86)
+    .setColor(orange)
     .setTimestamp()
-    .setDescription(`**Action:** Un/mute\n**Target:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}\n**Duration:**`)
-    .setFooter(`Case ${caseNum}`);
+    .setDescription(`Mute executed by ${message.author}`)
+    .setFooter(`Case ${caseNum}`)
+	.addField("Muted User", `${user.tag}`)
+	.addField("Muted in", message.channel)
+	.addField("Time", message.createdAt)
+	.addField("Length", `**PERM**`)
+	.addField("Reason", `${reason}`);
 
   if (!message.guild.member(client.user).hasPermission('MANAGE_ROLES_OR_PERMISSIONS')) return message.reply('I do not have the correct permissions.').catch(console.error);
 

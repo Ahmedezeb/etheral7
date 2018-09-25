@@ -53,6 +53,7 @@ module.exports.run = async (bot, message, args) => {
   let muteembed = new Discord.RichEmbed()
   .setDescription(`Mute executed by ${message.author}`)
   .setColor(orange)
+  .setTimestamp()
   .addField("Muted User", tomute)
   .addField("Muted in", message.channel)
   .addField("Time", message.createdAt)
