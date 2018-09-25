@@ -1,4 +1,4 @@
 module.exports = member => {
-  const guild = member.guild;
-  guild.defaultChannel.sendMessage(`${member.user.username} was beamed up`);
+    let guild = member.guild;
+    guild.channels.get('472191923856343071').send(`${member.user.username} was beamed up`);
 };
