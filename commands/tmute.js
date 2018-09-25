@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const ms = require("ms");
+const {caseNumber} = require('../util/caseNumber.js');
 const config = require("../config.json");
 const red = config.red;
 const green = config.green;
@@ -82,7 +83,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'tempmute',
+  name: 'tmute',
   description: 'tempmutes the mentioned user.',
   usage: 'tmute[mention] [time] [reason]'
 };
