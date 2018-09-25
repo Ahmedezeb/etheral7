@@ -11,7 +11,7 @@ exports.run = (client, message, args) => {
     }
 
     if (message.channel.nsfw == false){
-        return message.reply('due to We Out Here\'s rules, urban can only be used in NSFW channels, as the content of the command may not be appreciate for all ages.');
+        return message.reply('due to We Out Here\'s rules, 4chan can only be used in NSFW channels, as the content of the command may not be appreciate for all ages.');
     }
     // print all boards
     if(args.length == 2){
