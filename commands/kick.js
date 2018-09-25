@@ -1,25 +1,27 @@
-const {RichEmbed} = require('discord.js');
-const {caseNumber} = require('../util/caseNumber.js');
-const {parseUser} = require('../util/parseUser.js');
-const config = require('../config.json');
-exports.run = async (client, message, args) => {
-  const user = message.mentions.users.first();
-  parseUser(message, user);
-  const modlog = client.channels.find('name', 'mod-log');
-  const caseNum = await caseNumber(client, modlog);
-  if (!modlog) return message.reply('I cannot find a mod-log channel');
-  if (message.mentions.users.size < 1) return message.reply('You must mention someone to kick them.').catch(console.error);
+const Discord = require("discord.js");
 
-  // message.guild.member(user).kick();
+module.exports.run = async (bot, message, args) => {
+    let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+    if(!kUser) return message.channel.send("Can't find user!");
+    let kReason = args.join(" ").slice(22);
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("No can do pal!");
+    if(kUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("That person can't be kicked!");
 
-  const reason = args.splice(1, args.length).join(' ') || `Awaiting moderator's input. Use ${config.prefix}reason ${caseNum} <reason>.`;
-  const embed = new RichEmbed()
-  .setColor(0x00AE86)
-  .setTimestamp()
-  .setDescription(`**Action:** Kick\n**Target:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}`)
-  .setFooter(`Case ${caseNum}`);
-  return client.channels.get(modlog.id).send({embed});
-};
+    let kickEmbed = new Discord.RichEmbed()
+    .setDescription("~Kick~")
+    .setColor("#e56b00")
+    .addField("Kicked User", `${kUser} with ID ${kUser.id}`)
+    .addField("Kicked By", `<@${message.author.id}> with ID ${message.author.id}`)
+    .addField("Kicked In", message.channel)
+    .addField("Tiime", message.createdAt)
+    .addField("Reason", kReason);
+
+    let kickChannel = message.guild.channels.find(`name`, "mod-log");
+    if(!kickChannel) return message.channel.send("Can't find incidents channel.");
+	
+    message.guild.member(kUser).kick(kReason + 'https://discord.gg/reFzBd2');
+    kickChannel.send(kickEmbed);
+}
 
 exports.conf = {
   aliases: [],
