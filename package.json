@@ -20,6 +20,7 @@
     "discord.js",
 	"moment",
 	"ms",
+	"fortnite",
 	"reqeust",
 	"chalk"
 	],
@@ -35,6 +36,7 @@
     "moment": "^2.18.1",
     "ms": "^0.7.3",
 	"request": "^2.85.0",
+	"fortnite": "^4.1.1",
 	"superagent": "^3.8.3"
   }
 }

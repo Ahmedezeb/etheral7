@@ -4,6 +4,7 @@ const config = require('./config.json');
 const chalk = require('chalk');
 const fs = require('fs');
 const moment = require('moment');
+const Fortnite = require('fortnite');
 require('./util/eventLoader')(client);
 
 const log = message => {
