@@ -59,7 +59,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("Length", mutetime)
   .addField("Reason", reason);
 
-  let incidentschannel = message.guild.channels.find(`name`, "incidents");
+  let incidentschannel = message.guild.channels.find(`name`, "mod-log");
   if(!incidentschannel) return message.reply("Please create a incidents channel first!");
   incidentschannel.send(muteembed);
 
