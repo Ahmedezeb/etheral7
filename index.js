@@ -5,6 +5,7 @@ const chalk = require('chalk');
 const fs = require('fs');
 const moment = require('moment');
 const Fortnite = require('fortnite');
+const https = require('https');
 require('./util/eventLoader')(client);
 
 const log = message => {
