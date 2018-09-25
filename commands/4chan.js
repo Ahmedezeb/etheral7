@@ -15,7 +15,7 @@ exports.run = (client, message, args) => {
         if(args[1] === "boards"){
             var msg = "";
             for(var i = 0; i < boards.length; i++){
-                msg += boards[i] + ", ";
+                msg += boards[i] + ",";
             }
             msg = msg.substring(0, msg.length - 2); // remove ", " at end
             message.channel.send("```" + msg + "```");
