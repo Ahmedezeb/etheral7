@@ -14,14 +14,10 @@ exports.run = async (client, message, args) => {
 
   const reason = args.splice(1, args.length).join(' ') || `Awaiting moderator's input. Use ${config.prefix}reason ${caseNum} <reason>.`;
   const embed = new RichEmbed()
-  .setColor(orange)
+  .setColor(0x00AE86)
   .setTimestamp()
-  .setDescription(`Kick executed by ${message.author}`)
-  .addField("Kicked User", `${user.tag}`)
-  .addField("Kicked By", `<@${message.author.tag}>`)
-  .addField("Kicked In", message.channel)
-  .addField("Time", message.createdAt);
-
+  .setDescription(`**Action:** Kick\n**Target:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}`)
+  .setFooter(`Case ${caseNum}`);
   return client.channels.get(modlog.id).send({embed});
 };
 
