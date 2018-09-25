@@ -1,9 +1,9 @@
 const Discord = require("discord.js");
 const ms = require("ms");
-const botconfig = require("../config.json");
-const red = botconfig.red;
-const green = botconfig.green;
-const orange = botconfig.orange;
+const config = require("../config.json");
+const red = config.red;
+const green = config.green;
+const orange = config.orange;
 
 module.exports.run = async (bot, message, args) => {
 
