@@ -21,7 +21,6 @@ module.exports = (member, client, config) => {
             description: `Wassup ${member.user}:v:`.toString(),
             timestamp: new Date(),
             footer: {
-            icon_url: guild.iconURL,
             text: "Enjoy your stay at :alien:**We Out Here**:alien:"
             }
         }});
