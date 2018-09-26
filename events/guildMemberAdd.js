@@ -10,7 +10,7 @@ module.exports = (member, client, config) => {
     }
     else{
         channel.send({embed: {
-            color: 0xffff00,
+            color: RANDOM,
             author: {
             name: member.user.username,
             icon_url: member.user.avatarURL
@@ -18,10 +18,10 @@ module.exports = (member, client, config) => {
             thumbnail: {
             url: member.user.avatarURL
             },
-            description: `Wassup ${member.user}:v:`.toString(),
+            description: `Wassup ${member.user.username}:v:`.toString(),
             timestamp: new Date(),
             footer: {
-            text: "Enjoy your stay at :alien:**We Out Here**:alien:"
+            text: "Are you here to expand your mind?"
             }
         }});
     }
