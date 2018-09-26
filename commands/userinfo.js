@@ -23,7 +23,7 @@ module.exports.run = (client, message, args) => {
 };
 
 exports.conf = {
-  enabled: false,
+  enabled: true,
   guildOnly: false,
   aliases: ["ui"],
   permLevel: 2
@@ -31,7 +31,6 @@ exports.conf = {
 
 exports.help = {
   name: "userinfo",
-  category: "Miscelaneous",
   description: "Gives some useful user info",
   usage: "userinfo [mention]"
 };
