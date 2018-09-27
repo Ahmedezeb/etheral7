@@ -6,12 +6,12 @@ const chalkWarn = chalk.bgRed.white;
 module.exports = (member, client, config) => {
     const channel = member.guild.channels.find('name', 'welcome');
     const embed = {
-        "title": "Welcome ${member.user.username} to We Out Here!",
-        "description": "\nWassup ${member.user.username}:v: This is **OUR** discord, and it is targeted toward chilled-out people. We are always trying to create a fun + relaxed environment with many ways for members to socialize and enjoy themselves!\n\n",
+        "title": "Welcome to We Out Here!",
+        "description": `Wassup ${member.user}:v: This is **OUR** discord, and it is targeted toward chilled-out people. We are always trying to create a fun + relaxed environment with many ways for members to socialize and enjoy themselves!`.toString(),
         "color": 1,
         "timestamp": new Date(),
         "footer": {
-          "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+          "icon_url": "https://cdn.discordapp.com/attachments/494751952480108546/494781164679069716/new_logo_2.png",
           "text": "Are you here to expand your mind?"
         },
         "thumbnail": {
@@ -39,7 +39,7 @@ module.exports = (member, client, config) => {
           },
           {
             "name": "Enjoy Your Stay!",
-            "value": ":chill:",
+            "value": `:chill:`.toString,
             "inline": true
           }
         ]
