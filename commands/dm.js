@@ -14,7 +14,7 @@ message.delete().catch(O_o=>{});
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['DM'],
+  aliases: ['DM','dm'],
   permLevel: 2
 }
 module.exports.help = {

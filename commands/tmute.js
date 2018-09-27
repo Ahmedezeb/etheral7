@@ -45,7 +45,7 @@ module.exports.run = async (bot, message, args) => {
   message.delete().catch(O_o=>{});
 
   try{
-    await tomute.send(`Hello, you have been muted for ${mutetime}. If you feel this is a mistake or abuse, message _Lively#0286`)
+    await tomute.send(`<@${tomute.id}> you have been muted for ${mutetime}, ${reason}. Any further rule breaking with result in more harsh punishments. Read #rules in We Out Here. \n\nIf you feel this is a mistake or abuse, message _Lively#0286`)
   }catch(e){
     message.channel.send(`A user has been muted... but their DMs are locked. They will be muted for ${mutetime}`)
   }
