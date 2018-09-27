@@ -7,7 +7,7 @@ module.exports = (member, client, config) => {
     const channel = member.guild.channels.find('name', 'welcome');
     const embed = {
         "title": "Welcome to We Out Here!",
-        "description": `Wassup ${member.user}:v: This is **OUR** discord, and it is targeted toward chilled-out people. We are always trying to create a fun + relaxed environment with many ways for members to socialize and enjoy themselves!`.toString(),
+        "description": "Wassup dude!:v: This is **OUR** discord, and it is targeted toward chilled-out people:chill:. We are always trying to create a fun + relaxed environment with many ways for members to socialize and enjoy themselves!",
         "color": 1,
         "timestamp": new Date(),
         "footer": {
@@ -37,11 +37,7 @@ module.exports = (member, client, config) => {
             "name": "How do I apply for staff?",
             "value": "If you actually plan to apply just go to #application-format, then fill out the formated application(*it doesn't need to be lengthy*). Once you are finished, go to #applications-submit, there you will need to type `.submit [paste application]`\nOnce you have submitted your application it will go under review, after the decision is made a Adminstrator will DM you\n"
           },
-          {
-            "name": "Enjoy Your Stay!",
-            "value": `:chill:`.toString,
-            "inline": true
-          }
+
         ]
       };
 
