@@ -1,7 +1,7 @@
 exports.run = (client, message) => {
 const embed = {
   "image": {
-    "url": "https://cdn.discordapp.com/embed/avatars/0.png"
+    "url": "https://cdn.discordapp.com/attachments/494751952480108546/494798286369193994/sex-positions.png"
   }
 };
 
