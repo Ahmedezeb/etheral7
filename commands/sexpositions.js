@@ -9,7 +9,9 @@ if (message.channel.nsfw == false){
         return message.reply('due to We Out Here\'s rules, sexpositions can only be used in NSFW channels, as the content of the command may not be appreciate for all ages.');
     }
 
-channel.send("*I'd recommend these*:ok_hand:", { embed });
+channel.send("*I'd recommend these*:ok_hand:", { embed })
+
+}
 
 exports.conf = {
     enabled: true,
