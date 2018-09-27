@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
 let rMember = message.mentions.members.first();
 let botmessage = args.join(" ").slice(22)
 rMember.send(botmessage);
-console.log(`Messaged ${rMember.user.username} the Message ${botmessage}`);
+console.log(`Messaged ${rMember.user.username} : ${botmessage}`);
 
 message.delete().catch(O_o=>{});
   }
