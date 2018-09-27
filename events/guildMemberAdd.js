@@ -7,7 +7,7 @@ module.exports = (member, client, config) => {
     const channel = member.guild.channels.find('name', 'welcome');
     const embed = {
         "title": "Welcome to We Out Here!",
-        "description": "Wassup dude!:v: This is **OUR** discord, and it is targeted toward chilled-out people:chill:. We are always trying to create a fun + relaxed environment with many ways for members to socialize and enjoy themselves!",
+        "description": "Wassup dude!:v: This is **OUR** discord, and it is targeted toward chilled-out people. We are always trying to create a fun + relaxed environment with many ways for members to socialize and enjoy themselves!",
         "color": 1,
         "timestamp": new Date(),
         "footer": {
