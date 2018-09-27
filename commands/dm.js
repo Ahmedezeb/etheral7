@@ -10,7 +10,6 @@ console.log(`Messaged ${rMember.user.username} the Message ${botmessage}`);
 
 message.delete().catch(O_o=>{});
   }
-}
 
 exports.conf = {
   enabled: true,
