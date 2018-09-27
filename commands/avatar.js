@@ -1,5 +1,4 @@
-exports.run = (client, message) => {
-    const Discord = require("discord.js");
+const Discord = require("discord.js");
 
 exports.run = async (bot, message, args) => { 
 
@@ -29,6 +28,11 @@ exports.run = async (bot, message, args) => {
     message.channel.stopTyping(true);
 
     msg.delete();
+}
+
+
+module.exports.help = {
+name: "avatar"
 }
 
 exports.conf = {
