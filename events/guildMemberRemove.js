@@ -1,7 +1,7 @@
 module.exports = member => {
     const embed = {
      "image": {
-      "url": "https://discordapp.com/channels/472174636839469088/494751952480108546/495728458958110727"
+      "url": "https://cdn.discordapp.com/attachments/494751952480108546/495728458958110721/beam.gif"
     },
     };
     let guild = member.guild;
