@@ -10,11 +10,11 @@ module.exports.run = async (bot, message, args) => {
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ['ac'],
+  aliases: ['Say'],
   permLevel: 2
 }
 module.exports.help = {
-  name: 'announce',
-  description: 'Make an announcement',
-  usage: 'ac [message]'
+  name: 'say',
+  description: 'Say a message',
+  usage: 'say [message]'
 }
