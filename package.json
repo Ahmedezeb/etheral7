@@ -20,7 +20,8 @@
     "discord.js",
 	"moment",
 	"ms",
-	"fortnite",
+  "fortnite",
+  "superagent",
   "reqeust",
 	"chalk"
 	],
