@@ -6,6 +6,7 @@ const fs = require('fs');
 const moment = require('moment');
 const Fortnite = require('fortnite');
 const https = require('https');
+const figlet = require('figlet');
 require('./util/eventLoader')(client);
 
 const log = message => {
