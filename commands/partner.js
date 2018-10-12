@@ -10,9 +10,9 @@ module.exports.run = async (client, message, args) => {
       let logEmbed = new Discord.RichEmbed()
       .setTitle("Partners-Log")
       .setColor("#0537ff")
-      .setDescription(`Advertised by: ${message.author}`)
-      .addField(`${sayMessage}`)
-      .setTimestamp();
+      .setDescription(`${sayMessage}`)
+      .setTimestamp()
+      .setFooter(`Advertised by: ${message.author}`);
 
       const esayMessage = args.join(" ");
       // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
