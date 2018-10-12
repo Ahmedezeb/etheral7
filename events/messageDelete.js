@@ -1,4 +1,5 @@
 const config = require('../config.json');
+const client = new Discord.Client();
 module.exports = messageDelete => {
 client.on('messageDelete', async (message) => {
     const client = message.client;
