@@ -1,5 +1,6 @@
 const config = require('../config.json');
 module.exports = messageDelete => {
+client.on('messageDelete', async (message) => {
     const client = message.client;
     const logs = message.guild.channels.find('name', 'text-log');
     if (message.guild.me.hasPermission('MANAGE_CHANNELS') && !logs) {
@@ -26,4 +27,6 @@ module.exports = messageDelete => {
         .setTimestamp()
     console.log(entry)
     logs.send(logembed);
+})
+
 };
