@@ -3,8 +3,8 @@ exports.run = (client, message) => {
       return message.reply("You're not authorized to use this command: MANAGE_MESSAGES");
 
       message.delete().catch(O_o=>{});
-      
-  message.channel.send('```' + '▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬' + '```')
+
+  message.channel.send('```' + '▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬' + '```')
 };
 
 exports.conf = {
