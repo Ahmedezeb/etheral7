@@ -27,4 +27,4 @@ client.on('messageDelete', async (message) => {
         .setTimestamp()
     console.log(entry)
     logs.send(logembed);
-})
+});
