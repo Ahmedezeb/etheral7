@@ -1,4 +1,4 @@
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (client, message, args) => {
       let member = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0])
       if(!message.member.hasPermission("ADMINISTRATOR"))
           return message.reply({embed: {
@@ -23,3 +23,15 @@ module.exports.run = async (bot, message, args) => {
       description: "All players in this discord server have got your message."
   }});
 }
+exports.conf = {
+    enabled: true,
+    guildOnly: true,
+    aliases: ['DMALL'],
+    permLevel: 4
+  };
+  
+  exports.help = {
+    name: 'dmall',
+    description: 'Send a direct message to all in the discord.',
+    usage: 'dmall'
+  };
