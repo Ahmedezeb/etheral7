@@ -29,7 +29,7 @@ exports.conf = {
 };
 
 exports.help = {
-    name: "Asciify",   
+    name: "asciify",   
     description: "Ooh fancy",
     usage: "Asciify"
 };
