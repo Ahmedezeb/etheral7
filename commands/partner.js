@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 const PartnerManager = client.guilds.get(message.guild.id).roles.find('name', 'Partner Managers');
+const user = message.mentions.users.first();
 
     if (message.guild.member(user).roles.has(PartnerManager.id)) 
       return message.reply("You're not authorized to use this command: PARTNER MANAGE");
