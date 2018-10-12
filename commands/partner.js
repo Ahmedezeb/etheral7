@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (client, message, args) => {
 const PartnerManager = client.guilds.get(message.guild.id).roles.find('name', 'Partner Managers');
 
     if (message.guild.member(user).roles.has(PartnerManager.id)) 
