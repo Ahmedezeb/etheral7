@@ -1,3 +1,6 @@
+const config = require('../config.json');
+const client = message.client;
+
 client.on('messageDelete', async (message) => {
     const logs = message.guild.channels.find('name', 'text-log');
     if (message.guild.me.hasPermission('MANAGE_CHANNELS') && !logs) {
