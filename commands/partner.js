@@ -4,14 +4,14 @@ module.exports.run = async (client, message, args) => {
 
     if(!message.member.hasPermission("MANAGE_MESSAGES"))
       return message.reply("You're not authorized to use this command: MANAGE_MESSAGES");
-      
+
       const sayMessage = args.join(" ");
 
       let logEmbed = new Discord.RichEmbed()
       .setTitle("Partners-Log")
       .setColor("#0537ff")
-      .setDescription(`Said by ${message.author}`)
-      .addField("Ad", `${sayMessage}`)
+      .setDescription(`Advertised by: ${message.author}`)
+      .addField(`${sayMessage}`)
       .setTimestamp();
 
       const esayMessage = args.join(" ");
