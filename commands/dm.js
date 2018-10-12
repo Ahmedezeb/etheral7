@@ -8,6 +8,8 @@ let botmessage = args.join(" ").slice(22)
 rMember.send(botmessage);
 console.log(`Messaged ${rMember.user.username} : ${botmessage}`);
 
+}
+
 exports.conf = {
   enabled: true,
   guildOnly: false,
