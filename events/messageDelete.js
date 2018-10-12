@@ -1,8 +1,8 @@
 const config = require('../config.json');
-const client = new Discord.Client();
 module.exports = messageDelete => {
-client.on('messageDelete', async (message) => {
     const client = message.client;
+client.on('messageDelete', async (message) => {
+    
     const logs = message.guild.channels.find('name', 'text-log');
     if (message.guild.me.hasPermission('MANAGE_CHANNELS') && !logs) {
         await message.guild.createChannel('logs', 'text');
