@@ -15,7 +15,7 @@ const PartnerManager = client.guilds.get(message.guild.id).roles.find('name', 'P
       .addField("Ad", `${sayMessage}`)
       .setTimestamp();
 
-      const sayMessage = args.join(" ");
+      const esayMessage = args.join(" ");
       // Then we delete the command message (sneaky, right?). The catch just ignores the error with a cute smiley thing.
       message.delete().catch(O_o=>{});
       // And we get the bot to say the thing:
