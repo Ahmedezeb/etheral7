@@ -1,4 +1,4 @@
-module.exports.run = async (client, message, args) => {
+module.exports.run = async (bot, message, args) => {
       let member = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0])
       if(!message.member.hasPermission("ADMINISTRATOR"))
           return message.reply({embed: {
