@@ -1,8 +1,6 @@
 const config = require('../config.json');
 module.exports = messageDelete => {
     const client = messageDelete.client;
-client.on('messageDelete', async (message) => {
-    
     const logs = message.guild.channels.find('name', 'text-log');
     if (message.guild.me.hasPermission('MANAGE_CHANNELS') && !logs) {
         await message.guild.createChannel('logs', 'text');
