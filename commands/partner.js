@@ -4,6 +4,8 @@ module.exports.run = async (client, message, args) => {
 
     if(!message.member.hasPermission("MANAGE_MESSAGES"))
       return message.reply("You're not authorized to use this command: MANAGE_MESSAGES");
+      
+      const sayMessage = args.join(" ");
 
       let logEmbed = new Discord.RichEmbed()
       .setTitle("Partners-Log")
