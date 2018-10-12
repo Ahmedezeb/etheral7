@@ -2,7 +2,9 @@ exports.run = (client, message) => {
     if(!message.member.hasPermission("MANAGE_MESSAGES"))
       return message.reply("You're not authorized to use this command: MANAGE_MESSAGES");
 
-  message.channel.send('```' + 'NEW PARTNER' + '```')
+      message.delete().catch(O_o=>{});
+      
+  message.channel.send('```' + '▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬' + '```')
 };
 
 exports.conf = {
