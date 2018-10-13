@@ -2,9 +2,6 @@ const config = require('../config.json');
 module.exports = messageDelete => {
     const client = messageDelete.client;
     const logs = message.guild.channels.find('name', 'text-log');
-    if (message.guild.me.hasPermission('MANAGE_CHANNELS') && !logs) {
-        await message.guild.createChannel('logs', 'text');
-    }
     if (!logs) {
         return console.log('The logs channel does not exist and cannot be created')
     }
@@ -26,6 +23,6 @@ module.exports = messageDelete => {
         .setTimestamp()
     console.log(entry)
     logs.send(logembed);
-})
+}
 
 };
