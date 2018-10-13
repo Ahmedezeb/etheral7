@@ -38,7 +38,7 @@ client.on('messageDelete', async (message) => {
   const logembed = new Discord.RichEmbed()
       //.setTitle('Message Deleted')
       .setAuthor(user.tag, message.author.displayAvatarURL)
-      .addField(`**Message sent by ${message.author.username}> deleted in ${message.channel.name}**\n\n`, message.content)
+      .addField(`**Deleted in ${message.channel.name}**\n\n`, message.content)
       .setColor(message.guild.member(client.user).displayHexColor)
       .setFooter(`<#${message.channel.id}>`)
       .setTimestamp()
