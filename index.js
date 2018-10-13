@@ -19,9 +19,9 @@ client.on('ready', () => {
 });
 
 client.on('messageDelete', async (message) => {
-  const logs = message.guild.channels.find('name', 'logs');
+  const logs = message.guild.channels.find('name', 'deletion-logs');
   if (message.guild.me.hasPermission('MANAGE_CHANNELS') && !logs) {
-      await message.guild.createChannel('logs', 'text');
+      await message.guild.createChannel('logs', 'deletion-logs');
   }
   if (!logs) {
       return console.log('The logs channel does not exist and cannot be created')
