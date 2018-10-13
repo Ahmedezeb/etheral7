@@ -9,20 +9,21 @@ exports.run = (client, message, args) => {
     provider.search (game) .then (result => {
     provider.detail (result [0] .id, "unitedstates", "us"). then (results => {
         console.log (results)
-    const embed = new Discord.RichEmbed ()
-    .setAuthor ('Steam Store', steampng)
-    .setColor ("#36393F")
-    .setTitle (result [0] .name)
-    .addField (`Game ID`, result [0] .id)
-    .setthumbnail (results.otherdata.imageurl)
-    .addField ('Types', results.genres)
-    .addField ('Price', `Nolmal Price ** $ {results.priceData.initial Price} ** $
-Reduced price ** $ {results.priceData.finalPrice} ** TL`, true
-    .addField ('Platforms', results.otherData.platforms, true)
-    .addField ('Metacritic Score', results.otherData.metacriticScore, true)
-    .addField ('Tags', results.otherData.features, true)
-    .addField ('Developers', results.otherData.developer, true)
-    .addField ('Publishers', results.otherData.publisher);
+     const embed = new Discord.RichEmbed()
+    .setAuthor('Steam Store', steampng)
+  .setColor("#36393F")
+    .setTitle(result[0].name)
+    .addField(`Game ID`, result[0].id)
+    .setThumbnail(results.otherData.imageUrl)
+    .addField('Types', results.genres)
+    .addField('Price', `Nolmal Fiyat **${results.priceData.initialPrice}** TL
+İndirimli Fiyat **${results.priceData.finalPrice}** TL`, true)
+    .addField('Platforms', results.otherData.platforms, true)
+    .addField('Metacritic Score', results.otherData.metacriticScore, true)
+    .addField('Tags', results.otherData.features, true)
+    .addField('Developers', results.otherData.developer, true)
+    .addField('Publishers', results.otherData.publisher)
+  .setColor("#36393F")
     
     message.channel.send(embed).catch(e => {
         console.log(e)
