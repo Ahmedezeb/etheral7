@@ -18,7 +18,8 @@ client.on("message", (message) => {
     const What = new Discord.RichEmbed()
     .setImage("https://cdn.discordapp.com/attachments/494751952480108546/500501414666305549/what.gif")
     message.channel.send(What);
-  }
+  });
+  
 client.on('ready', () => {
     client.user.setActivity('Type .help', {type: 'WATCHING'});
 });
