@@ -23,7 +23,7 @@ Reduced price ** $ {results.priceData.finalPrice} ** TL`, true
     .addField ('Tags', results.otherData.features, true)
     .addField ('Developers', results.otherData.developer, true)
     .addField ('Publishers', results.otherData.publisher)
-    .setColor ( "#36393F")
+    .setColor ("#36393F")
 
     message.channel.send(embed).catch(e => {
         console.log(e)
