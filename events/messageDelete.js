@@ -24,5 +24,3 @@ module.exports = messageDelete => {
     console.log(entry)
     logs.send(logembed);
 }
-
-};
