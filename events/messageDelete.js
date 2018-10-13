@@ -5,7 +5,7 @@ module.exports = messageDelete => {
     if (!logs) {
         return console.log('The logs channel does not exist and cannot be created')
     }
-    const entry = await message.guild.fetchAuditLogs({
+    const entry = message.guild.fetchAuditLogs({
         type: 'MESSAGE_DELETE'
     }).then(audit => audit.entries.first())
     let user;
