@@ -17,7 +17,7 @@ exports.run = async (client, message, args) => {
                 msg.delete();
                 const emb = new Discord.RichEmbed()
                     .setColor(0xFFFF00)
-                    .setImage('https://cdn.glitch.com/ce500e3d-b500-47a8-a6a8-c0b5657d808c%2FWebp.net-gifmaker.gif')
+                    .setImage('https://media1.tenor.com/images/bfa90f13ba03d065a9f4dc12ff5f9cd5/tenor.gif?itemid=4438365')
                     .setFooter(`Requested by: ${message.author.tag}`);
                 message.channel.send({
                     embed: emb
