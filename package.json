@@ -24,7 +24,7 @@
   "superagent",
   "reqeust",
   "figlet",
-  "steam-provider"
+  "steam-provider",
 	"chalk"
 	],
 	"author": "livelysource",
