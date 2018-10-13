@@ -39,7 +39,7 @@ client.on('messageDelete', async (message) => {
       //.setTitle('Message Deleted')
       .setAuthor(user.tag, message.author.displayAvatarURL)
       .addField(`**Deleted in ${message.channel.name}**\n\n`, message.content)
-      .setImage(message.proxyURL)
+      .setImage(message.url)
       .setColor(message.guild.member(client.user).displayHexColor)
       .setFooter(`<#${message.channel.id}>`)
       .setTimestamp()
