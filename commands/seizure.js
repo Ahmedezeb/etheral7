@@ -15,7 +15,7 @@ exports.run = async (client, message, args) => {
             });
             sure.on('collect', r => {
                 msg.delete();
-                const emb = new A.RichEmbed()
+                const emb = new Discord.RichEmbed()
                     .setColor(0xFFFF00)
                     .setImage('https://cdn.glitch.com/ce500e3d-b500-47a8-a6a8-c0b5657d808c%2FWebp.net-gifmaker.gif')
                     .setFooter(`Requested by: ${message.author.tag}`);
