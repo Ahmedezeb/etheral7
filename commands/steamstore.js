@@ -22,9 +22,8 @@ Reduced price ** $ {results.priceData.finalPrice} ** TL`, true
     .addField ('Metacritic Score', results.otherData.metacriticScore, true)
     .addField ('Tags', results.otherData.features, true)
     .addField ('Developers', results.otherData.developer, true)
-    .addField ('Publishers', results.otherData.publisher)
-    .setColor ("#36393F");
-
+    .addField ('Publishers', results.otherData.publisher);
+    
     message.channel.send(embed).catch(e => {
         console.log(e)
         message.reply('Hata Olustu Yada `' + game + '` Adlı Oyun Bulunamadı')
