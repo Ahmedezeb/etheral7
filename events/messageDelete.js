@@ -1,5 +1,5 @@
 const config = require('../config.json');
-module.exports = messageDelete => {
+module.exports = messageDelete, async (message) => {
     const client = messageDelete.client;
     const logs = message.guild.channels.find('name', 'text-log');
     if (!logs) {
