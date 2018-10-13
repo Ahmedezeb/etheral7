@@ -14,10 +14,10 @@ exports.run = (client, message, args) => {
   .setColor("#36393F")
     .setTitle(result[0].name)
     .addField(`Game ID`, result[0].id)
-    .setThumbnail(results.otherData.imageUrl)
+    .setImage(results.otherData.imageUrl)
     .addField('Types', results.genres)
-    .addField('Price', `Nolmal Fiyat **${results.priceData.initialPrice}** TL
-İndirimli Fiyat **${results.priceData.finalPrice}** TL`, true)
+    .addField('Price', `Normal Price **${results.priceData.initialPrice}** US
+Discount Price **${results.priceData.finalPrice}** US`, true)
     .addField('Platforms', results.otherData.platforms, true)
     .addField('Metacritic Score', results.otherData.metacriticScore, true)
     .addField('Tags', results.otherData.features, true)
