@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const superagent = require('superagent');
 
-const run = module.exports.run = async (client, msg, args) => {
+const run = module.exports.run = async (client, message, args) => {
   let{body} = await superagent
   .get(`https://api-to.get-a.life/meme`);
 
@@ -10,7 +10,7 @@ const run = module.exports.run = async (client, msg, args) => {
   .setFooter(`${message.author}`)
   .setImage(body.url);
 
-  msg.channel.send(me);
+  message.channel.send(me);
     }
 
 exports.conf = {
