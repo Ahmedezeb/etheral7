@@ -7,7 +7,7 @@ const run = module.exports.run = async (client, msg, args) => {
 
   let me = new Discord.RichEmbed() 
   .setColor("#7289DA")
-  .setFooter(${message.author})
+  .setFooter(`${message.author}`)
   .setImage(body.url);
 
   msg.channel.send(me);
