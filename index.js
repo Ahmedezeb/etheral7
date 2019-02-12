@@ -22,7 +22,7 @@ client.on("message", (message) => {
 });
 
 client.on('ready', () => {
-    client.user.setActivity('Type .help', {type: 'WATCHING'});
+    client.user.setActivity();
 });
 
 client.on('messageDelete', async (message) => {
