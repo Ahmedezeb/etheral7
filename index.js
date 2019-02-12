@@ -22,7 +22,7 @@ client.on("message", (message) => {
 });
 
 client.on('ready', () => {
-    client.user.setActivity();
+
 });
 
 client.on('messageDelete', async (message) => {
