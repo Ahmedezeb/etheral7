@@ -14,7 +14,7 @@ const log = message => {
   
 };
 client.on("message", (message) => {
-  if(message.content === "<@483820567581949993>") {
+  if(message.content === "<@535889824801095700>") {
     const What = new Discord.RichEmbed()
     .setImage("https://cdn.discordapp.com/attachments/494751952480108546/500501414666305549/what.gif")
     message.channel.send(What);
