@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
 
     message.delete().catch(O_o=>{});
     reportschannel.send(reportEmbed);
-    reportschannel.send('<@&545013420123226132> <@&545013420123226132>')
+    reportschannel.send('<@#545013420123226132> <@#545013420123226132>')
 };
 
  exports.conf = {
