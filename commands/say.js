@@ -11,7 +11,7 @@ exports.conf = {
   enabled: true,
   guildOnly: true,
   aliases: ['Say'],
-  permLevel: 2
+  permLevel: 1
 }
 module.exports.help = {
   name: 'say',
