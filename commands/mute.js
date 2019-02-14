@@ -45,7 +45,7 @@ exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: ['unmute'],
-  permLevel: 0
+  permLevel: 2
 };
 
 exports.help = {
