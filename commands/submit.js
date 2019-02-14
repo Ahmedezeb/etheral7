@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
 
     message.delete().catch(O_o=>{});
     applicationschannel.send(applicationEmbed);
-    applicationschannel.send('If you think the application should be accepted react with :white_check_mark:\n If you think the application should be rejected react with :negative_squared_cross_mark:')
+    applicationschannel.send('If you think the application should be accepted react with :white_check_mark:\nIf you think the application should be rejected react with :negative_squared_cross_mark:')
 };
 
  exports.conf = {
