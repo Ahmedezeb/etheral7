@@ -14,7 +14,7 @@ exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: ['DM','dm'],
-  permLevel: 2
+  permLevel: 0
 }
 module.exports.help = {
   name: 'DM',
