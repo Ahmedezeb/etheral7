@@ -10,8 +10,8 @@ module.exports.run = async (bot, message, args) => {
     .addField("Application", application)
 	.setFooter(message.createdAt);
 
-    let applicationschannel = message.guild.channels.find(`name`, "applications");
-    if(!applicationschannel) return message.channel.send("Couldn't find applications channel.");
+    let applicationschannel = message.guild.channels.find(`name`, "applications-log");
+    if(!applicationschannel) return message.channel.send("Couldn't find applications-log channel.");
 
 
     message.delete().catch(O_o=>{});
